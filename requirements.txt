@@ -1,0 +1,7 @@
+boto3>=1.26
+fastapi>=0.95
+uvicorn>=0.22
+mcp-server>=0.1.0    # placeholder: if using a community MCP helper lib; else use JSON-RPC handler below
+pydantic>=1.10
+python-dotenv>=1.0
+

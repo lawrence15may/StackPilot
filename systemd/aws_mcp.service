@@ -1,0 +1,16 @@
+[Unit]
+Description=AWS MCP Server
+After=network.target
+
+[Service]
+User=ec2-user
+Group=ec2-user
+WorkingDirectory=/home/ec2-user/aws_mcp
+Environment="PATH=/home/ec2-user/aws_mcp/venv/bin"
+ExecStart=/home/ec2-user/aws_mcp/venv/bin/python /home/ec2-user/aws_mcp/aws_mcp.py
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+
